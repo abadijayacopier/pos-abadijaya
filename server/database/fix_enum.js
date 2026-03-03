@@ -1,3 +1,4 @@
+require('dotenv').config({ path: __dirname + '/../.env' });
 const { pool } = require('../config/database');
 
 async function fixEnum() {
