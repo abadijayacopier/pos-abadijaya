@@ -262,7 +262,10 @@ export default function ServicePage() {
                     </div>
                 </div>
 
-                <button className="btn btn-primary btn-block" onClick={handleSubmit}>💾 Simpan Service</button>
+                <div style={{ display: 'flex', gap: '12px' }}>
+                    <button className="btn btn-secondary" style={{ flex: 1 }} onClick={() => setFormOpen(false)}>❌ Batal</button>
+                    <button className="btn btn-primary" style={{ flex: 1 }} onClick={handleSubmit}>💾 Simpan Service</button>
+                </div>
             </Modal>
 
             {/* Detail Modal */}
@@ -322,8 +325,9 @@ export default function ServicePage() {
                             </div>
                         </div>
 
-                        <div style={{ margin: '12px 0' }}>
-                            <button className="btn btn-primary btn-block" onClick={handleUpdateDetail}>💾 Simpan Detail & Kalkulasi</button>
+                        <div style={{ display: 'flex', gap: '12px', margin: '12px 0' }}>
+                            <button className="btn btn-secondary" style={{ flex: 1 }} onClick={() => setDetailOpen(false)}>❌ Batal</button>
+                            <button className="btn btn-primary" style={{ flex: 1 }} onClick={handleUpdateDetail}>💾 Simpan Detail & Kalkulasi</button>
                         </div>
 
                         <div style={{ marginTop: '16px', borderTop: '1px solid var(--border)', paddingTop: '16px' }}>
